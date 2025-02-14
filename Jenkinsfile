@@ -15,7 +15,7 @@ pipeline {
         }   
         stage('Build docker image'){
             steps {
-                sh 'docker build -t todo-application:image:latest .'
+                sh 'docker build -t todo-application-image:latest .'
                 
             }
         }               
