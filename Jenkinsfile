@@ -24,7 +24,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]){
                     sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
-                    sh 'docker tag docker tag todo-application-image:latest ravijadhav249/todo-application:latest'
+                    sh 'docker tag todo-application-image:latest ravijadhav249/todo-application:latest'
                     sh 'docker push ravijadhav249/todo-application:latest'
                 }
             }
